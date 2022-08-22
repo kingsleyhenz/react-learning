@@ -1,17 +1,17 @@
 import React from 'react'
 
-const Navbar = () => {
+const Navbar = ({obinna}) => {
   return (
     <div className="navbar">
         <div className="logo">
-            <a href="/">logo</a>
+            <a href="/">{obinna}</a>
         </div>
 
         <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/">About Us</a></li>
-            <li><a href="/">Hot Sales</a></li>
-            <li><a href="/">Get in touch</a></li>
+        <li><a href="/">Pricing</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Contact us</a></li>
         </ul>
 
         <div className='navBtn'>

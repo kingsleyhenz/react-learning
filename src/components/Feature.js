@@ -1,40 +1,18 @@
-import React from "react";
-
-const Features = () => {
+import FeaturesCard from "./FeaturesCard";
+const Features = ({ data }) => {
     return (
         <div className="featureContainer">
-            <h2>Why shop with us</h2>
+            <h2>Why we are loved</h2>
             <div className="featuresContent">
-                <div className="card">
-                    <i class="material-symbols-outlined">verified</i>
-                    <h3>Trusted and verified</h3>
-                    <p>Best in the business until proven otherwise</p>
-                </div>
-                <div className="card" >
-                    <i style={{backgroundColor:"#4c6ef5"}} class="material-symbols-outlined">verified</i>
-                    <h3>Trusted and verified</h3>
-                    <p>Best in the business until proven otherwise</p>
-                </div>
-                <div className="card">
-                    <i style={{backgroundColor:"#ff004c"}} class="material-symbols-outlined">verified</i>
-                    <h3>Trusted and verified</h3>
-                    <p>Best in the business until proven otherwise</p>
-                </div>
-                <div className="card">
-                    <i class="material-symbols-outlined">verified</i>
-                    <h3>Trusted and verified</h3>
-                    <p>Best in the business until proven otherwise</p>
-                </div>
-                <div className="card" >
-                    <i style={{backgroundColor:"#4c6ef5"}} class="material-symbols-outlined">verified</i>
-                    <h3>Trusted and verified</h3>
-                    <p>Best in the business until proven otherwise</p>
-                </div>
-                <div className="card">
-                    <i style={{backgroundColor:"#ff004c"}} class="material-symbols-outlined">verified</i>
-                    <h3>Trusted and verified</h3>
-                    <p>Best in the business until proven otherwise</p>
-                </div>
+                {data.map((person) => (
+                    <FeaturesCard
+                        title={person.title}
+                        subTitle={person.subTitle}
+                        icon={person.icon}
+                        color={person.color}
+                    />
+                ))}
+                
             </div>
         </div>
     );
